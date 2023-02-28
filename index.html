@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Import moment.js and moment.js timezone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.41/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -16,18 +20,18 @@
         <option value="">New York</option>
         <option value="">Auckland</option>
       </select>
-    <div class="city">
+    <div class="city" id="honolulu">
       <div>
-        <h2>Los Angeles</h2>
+        <h2>Honolulu</h2>
         <div class="date">
             February 27th, 2023
         </div>
       </div>
         <div class="time">10:44 <small>AM</small></div>
     </div>
-    <div class="city">
+    <div class="city" id="bangkok">
       <div>
-        <h2>Paris</h2>
+        <h2>Bangkok</h2>
         <div class="date">
             February 27th, 2023
         </div>
