@@ -3,6 +3,25 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .container {
   max-width: 600px;
   margin: 60px auto;
@@ -21,7 +40,7 @@ body {
 }
 
 .city:last-child {
-    border: none;
+  border: none;
 }
 
 .time {
@@ -30,32 +49,13 @@ body {
 }
 
 .time small {
-    font-size: 20px;
-    vertical-align: middle;
-    line-height: 36px;
-}
-
-select {
-  display: block;
-  width: 100%;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-h1 {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 36px;
-}
-
-h2 {
-    margin: 0 0 5px;
-    font-size: 28px;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 36px;
 }
 
 .date {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 footer {
