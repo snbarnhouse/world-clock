@@ -23,3 +23,16 @@ bangkokTimeElement.innerHTML = bangkokTime.format("h:mm:ss [<small>]A[</small>]"
 
 updateTime();
 setInterval(updateTime, 1000);
+
+//Update clock to show the city the user selected
+function updateCity(event) {
+    let cityTimeZone = event.target.value;
+    let cityTime = moment().tz(cityTimeZone);
+    console.log(cityTime.format("MMMM Do, YYYY"));
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
