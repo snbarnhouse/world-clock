@@ -21,6 +21,17 @@ function updateTime() {
     "h:mm:ss [<small>]A[</small>]"
   );
 
+  //Melbourne date and time
+  let melbourneElement = document.querySelector("#melbourne");
+  let melbourneDateElement = melbourneElement.querySelector(".date");
+  let melbourneTimeElement = melbourneElement.querySelector(".time");
+  let melbourneTime = moment().tz("Australia/Melbourne");
+
+  melbourneDateElement.innerHTML = melbourneTime.format("MMMM Do, YYYY");
+  melbourneTimeElement.innerHTML = melbourneTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
   //Puerto Rico date and time
   let puertoRicoElement = document.querySelector("#puertoRico");
   let puertoRicoDateElement = puertoRicoElement.querySelector(".date");
