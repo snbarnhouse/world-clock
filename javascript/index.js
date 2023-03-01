@@ -44,14 +44,15 @@ function updateTime() {
   );
 }
 
-updateTime();
-setInterval(updateTime, 1000);
-
 //Update clock to show the city the user selected
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  //If the user chooses their current location
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   //Replace any _ with space in city name
-  //Split the string in an array at the / then show value with index of 1
+  //Split the string in an array at the / then show value with index of 1(the city name)
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
@@ -62,7 +63,7 @@ function updateCity(event) {
         <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
       </div>
       <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
-    "A"
+    " A"
   )}</small></div>
     </div>
     `;
