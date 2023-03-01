@@ -20,6 +20,17 @@ function updateTime() {
   bangkokTimeElement.innerHTML = bangkokTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
+
+  //Puerto Rico date and time
+  let puertoRicoElement = document.querySelector("#puertoRico");
+  let puertoRicoDateElement = puertoRicoElement.querySelector(".date");
+  let puertoRicoTimeElement = puertoRicoElement.querySelector(".time");
+  let puertoRicoTime = moment().tz("America/Puerto_Rico");
+
+  puertoRicoDateElement.innerHTML = puertoRicoTime.format("MMMM Do, YYYY");
+  puertoRicoTimeElement.innerHTML = puertoRicoTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 updateTime();
@@ -29,7 +40,8 @@ setInterval(updateTime, 1000);
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   //Replace any _ with space in city name
-  let cityName = cityTimeZone.replace("_", " ");
+  //Split the string in an array at the / then show value with index of 1
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
