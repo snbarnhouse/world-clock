@@ -14,4 +14,4 @@ GitHub Repository: https://github.com/snbarnhouse/world-clock
 
 Deployed:  https://world-clock-mjs.netlify.app/
 
-![World Clock App](/src/Screenshot-weather.png?raw=true "World Clock App")
+![World Clock App](/src/Screenshot-world-clock.png?raw=true "World Clock App")
