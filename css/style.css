@@ -4,6 +4,8 @@ body {
   background-image: url(../src/clocks.jpg);
   background-size: cover;
   color: white;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1 {
@@ -83,4 +85,10 @@ footer {
 
 footer a {
  color: white;
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 20px auto;
+  }
 }
