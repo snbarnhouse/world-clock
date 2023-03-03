@@ -44,8 +44,15 @@ function updateTime() {
   );
 }
 
+updateTime();
+setInterval(updateTime, 1000);
+let intervalID= 0;
+
 //Update clock to show the city the user selected
 function updateCity(event) {
+  clearInterval(intervalID);
+  intervalID = setInterval(() => {
+
   let cityTimeZone = event.target.value;
   //If the user chooses their current location
   if (cityTimeZone === "current") {
@@ -67,7 +74,7 @@ function updateCity(event) {
   )}</small></div>
     </div>
     <a href="/" class="resetLink">🔁Reset World Clock</a>
-    `;
+    `}, 1000);
 }
 
 updateTime();
