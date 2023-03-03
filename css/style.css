@@ -1,6 +1,9 @@
 body {
   background-color: #f9f7fe;
   font-family: sans-serif;
+  background-image: url(../src/clocks.jpg);
+  background-size: cover;
+  color: white;
 }
 
 h1 {
@@ -25,11 +28,12 @@ select {
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background: #fff;
+  background: black;
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 30px;
+  opacity: 0.85;
 }
 
 .city {
@@ -63,10 +67,20 @@ select {
   display: block;
   text-align: center;
   text-decoration: none;
+  color: white;
 }
 
 footer {
   text-align: center;
-  font-size: 14px;
-  opacity: 0.9;
+  margin: 20px auto;
+  font-size: 16px;
+  opacity: 0.85;
+  background: black;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+footer a {
+ color: white;
 }
